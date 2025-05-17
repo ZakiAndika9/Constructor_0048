@@ -40,3 +40,21 @@ public:
     friend class Admin;
 };
 
+class Petugas {
+private:
+    string nama, IDpetugas, levelAkses;
+
+public:
+    Petugas(string n, string id, string lvl)
+        : nama(n), IDpetugas(id), levelAkses(lvl) {}
+
+    void prosesPinjam(Buku* b, Peminjam* p) {
+        if (!b->dipinjam) {
+            b->dipinjam = true;
+            p->totalPinjaman++;
+            cout << "Buku dipinjam oleh " << p->nama << endl;
+        } else {
+            cout << "Buku sudah dipinjam!" << endl;
+        }
+    }
+};
