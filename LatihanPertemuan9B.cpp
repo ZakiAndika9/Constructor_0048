@@ -85,3 +85,28 @@ public:
         cout << "Level akses petugas diubah ke: " << levelBaru << endl;
     }
 };
+
+int main() {
+    Buku* b = new Buku("Algoritma Dasar", "Dian Pramita");
+    Peminjam* p = new Peminjam("Piska", "PMJ001");
+    Petugas* t = new Petugas("Bu Rika", "PT001", "Normal");
+    Admin* a = new Admin();
+
+    b->info();
+    t->prosesPinjam(b, p);
+    b->info();
+    p->info();
+
+    a->lihatStatistik(p, b);
+    a->ubahLevelAkses(t, "Administrator");
+
+    t->prosesKembali(b, p);
+    b->info();
+
+    delete b;
+    delete p;
+    delete t;
+    delete a;
+
+return 0;
+}
