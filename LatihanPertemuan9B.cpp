@@ -23,3 +23,20 @@ public:
     friend class Admin;
 };
 
+class Peminjam {
+private:
+    string nama, ID;
+    int totalPinjaman;
+
+public:
+    Peminjam(string n, string id) : nama(n), ID(id), totalPinjaman(0) {}
+
+    void info() {
+        cout << "Peminjam: " << nama << " | ID: " << ID
+             << " | Total Pinjaman: " << totalPinjaman << endl;
+    }
+
+    friend class Petugas;
+    friend class Admin;
+};
+
