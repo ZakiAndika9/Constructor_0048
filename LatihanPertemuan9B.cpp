@@ -80,4 +80,8 @@ public:
         cout << "- Status Buku: " << (b->dipinjam ? "Dipinjam" : "Tersedia") << endl;
     }
 
+    void ubahLevelAkses(Petugas* ptg, string levelBaru) {
+        ptg->levelAkses = levelBaru;
+        cout << "Level akses petugas diubah ke: " << levelBaru << endl;
+    }
 };
