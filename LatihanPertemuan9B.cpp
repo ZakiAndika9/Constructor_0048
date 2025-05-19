@@ -87,7 +87,7 @@ public:
 };
 
 int main() {
-    Buku* b = new Buku("Algoritma Dasar", "Dian Pramita");
+    Buku* b = new Buku("Algoritma Dasar", "Jodi");
     Peminjam* p = new Peminjam("Dikel", "PMJ001");
     Petugas* t = new Petugas("Bu Jihan", "PT001", "Normal");
     Admin* a = new Admin();
